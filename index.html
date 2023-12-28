@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main class="main">
+      <!-- <picture class="picture-background">
+        <source srcset="images/bg-into-mobile" , media="(max-width: 23.5em)" />
+        <img src="images/bg-intro-desktop.png" alt="Background Image" />
+      </picture> -->
+
+      <div class="left">
+        <h1 class="h1">Learn to code by watching others</h1>
+        <p class="paragraph">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+
+      <div class="right">
+        <button class="btn btn-blue">
+          Try it free 7 days
+          <span class="btn-blue-span">then $20/mo. thereafter</span>
+        </button>
+
+        <div class="container">
+          <form action="#" class="form">
+            <div class="field-group">
+              <label for="firstName" class="input__label"></label>
+              <input
+                type="text"
+                id="firstName"
+                class="input__field"
+                placeholder="First Name"
+                required
+              />
+              <img
+                src="images/icon-error.svg"
+                class="error-icon"
+                alt="error-img"
+              />
+              <p class="error-text">First Name cannot be empty</p>
+            </div>
+
+            <div class="field-group">
+              <label for="lastName" class="input__label"></label>
+              <input
+                type="text"
+                id="lastName"
+                class="input__field"
+                placeholder="Last Name"
+                required
+              />
+              <img
+                src="images/icon-error.svg"
+                class="error-icon"
+                alt="error-img"
+              />
+              <p class="error-text">Last Name cannot be empty</p>
+            </div>
+
+            <div class="field-group">
+              <label for="email" class="input__label"></label>
+              <input
+                type="email"
+                id="email"
+                class="input__field"
+                placeholder="Email Address"
+                required
+              />
+              <img
+                src="images/icon-error.svg"
+                class="error-icon"
+                alt="error-img"
+              />
+              <p class="error-text">Looks like this is not a email</p>
+            </div>
+
+            <div class="field-group">
+              <label for="password" class="input__label"></label>
+              <input
+                type="password"
+                id="password"
+                class="input__field"
+                placeholder="Password"
+                required
+              />
+              <img
+                src="images/icon-error.svg"
+                class="error-icon"
+                alt="error-img"
+              />
+              <p class="error-text">Password cannot be empty</p>
+            </div>
+
+            <button type="submit" class="btn btn-submit">
+              Claim your free trial
+            </button>
+          </form>
+          <p class="paragraph-2">
+            By clicking the button, you are agreeing to our
+            <a href="#" class="paragraph-2-span">Terms and Services</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

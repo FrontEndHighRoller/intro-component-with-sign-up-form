@@ -1,0 +1,254 @@
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////-------------------CSS RESET ---------------------------////////////////////////////////////*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////-------------------CSS RESET ---------------------------////////////////////////////////////*/
+
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  --Blue: hsl(248, 32%, 49%);
+
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+
+  --white: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--Red);
+  background-image: url(images/bg-intro-desktop.png);
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 68.5rem;
+  margin: 0 auto;
+  gap: 3.125rem;
+}
+
+.error-text,
+.error-icon {
+  display: none;
+}
+
+/* when error class added this happen to error text and error icon*/
+.field-group.error .error-text,
+.field-group.error .error-icon {
+  display: block;
+}
+
+.field-group.error input {
+  border: 2px solid var(--Red);
+}
+
+.left {
+  flex: 0 0 50%;
+}
+
+.h1 {
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.paragraph {
+  color: var(--white);
+}
+
+.right {
+  flex: 0 0 50%;
+}
+
+.btn {
+  color: var(--white);
+  border-radius: 0.625rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-blue {
+  background-color: var(--Blue);
+  box-shadow: 0 0.4rem 0.2rem #42414152;
+  margin-bottom: 1.5rem;
+  padding: 0.625rem 2.625rem;
+}
+
+.btn-blue-span {
+  color: var(--Grayish-Blue);
+}
+
+.container {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  position: relative;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.9375rem;
+  margin-top: 1.25rem;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid var(--Grayish-Blue);
+}
+
+.field-group {
+  position: relative;
+}
+
+.btn-submit {
+  box-shadow: 0 0.3rem hsla(154, 78%, 18%, 0.5);
+  background-color: var(--Green);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 1rem 0;
+  padding: 1.125rem 2.25rem;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+}
+
+.paragraph-2 {
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--Grayish-Blue);
+}
+
+.paragraph-2-span {
+  text-decoration: none;
+  color: var(--Red);
+  font-weight: 600;
+}
+
+.error-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+}
+
+.error-text {
+  color: var(--Red);
+  text-align: right;
+  font-size: 0.7rem;
+  margin-block-start: 5px;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 75rem) {
+  body {
+    overflow: scroll;
+  }
+  .main {
+    flex-direction: column;
+
+    margin: 3.125rem 1.25rem;
+  }
+
+  .h1 {
+    font-size: 1.5rem;
+  }
+
+  .left {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 23.75em) {
+  body {
+    background-image: url(images/bg-intro-mobile.png);
+  }
+}
